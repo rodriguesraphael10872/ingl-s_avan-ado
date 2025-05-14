@@ -14,75 +14,93 @@
     section { margin-bottom: 30px; }
     h2 { color: #004080; }
     ul { padding-left: 20px; }
-    iframe { width: 100%; height: 315px; border: none; }
-    .game-section { background: #f9f9f9; border: 1px solid #ccc; padding: 10px; margin-top: 20px; }
+    .quiz { background: #f9f9f9; padding: 15px; border: 1px solid #ccc; border-radius: 5px; }
+    .question { margin-bottom: 15px; }
+    .options input { margin-right: 8px; }
+    button { background-color: #004080; color: white; border: none; padding: 10px 20px; cursor: pointer; border-radius: 5px; }
+    button:hover { background-color: #0066cc; }
+    #result { margin-top: 20px; font-weight: bold; }
+    .progress-container { background: #ddd; border-radius: 20px; overflow: hidden; margin-bottom: 20px; }
+    .progress-bar { height: 25px; background-color: #4caf50; width: 0%; text-align: center; color: white; line-height: 25px; }
     footer { background: #004080; color: white; text-align: center; padding: 10px; margin-top: 20px; }
   </style>
 </head>
 <body>
   <header>
     <h1>Inglês em 2 Meses</h1>
-    <p>Do básico ao avançado com prática diária e jogos</p>
+    <p>Avanço progressivo com prática direta no site</p>
   </header>
 
   <nav>
-    <a href="#inicio">Início</a>
-    <a href="#cronograma">Cronograma</a>
-    <a href="#recursos">Recursos</a>
-    <a href="#jogo">Jogos</a>
+    <a href="#semana1">Semana 1</a>
+    <a href="#semana2">Semana 2</a>
+    <a href="#semana3">Semana 3</a>
+    <a href="#semana4">Semana 4</a>
   </nav>
 
   <main>
-    <section id="inicio">
-      <h2>Plano de Estudo Diário</h2>
-      <ul>
-        <li><strong>Listening:</strong> 1h de podcasts ou vídeos com legendas em inglês</li>
-        <li><strong>Reading:</strong> 1h de textos sobre temas variados (negócios, cultura, viagens)</li>
-        <li><strong>Speaking:</strong> Prática com apps ou repetição em voz alta</li>
-        <li><strong>Writing:</strong> Escrever diários, e-mails, redações simples</li>
-      </ul>
+    <div class="progress-container">
+      <div id="progressBar" class="progress-bar">0%</div>
+    </div>
+
+    <section id="semana1">
+      <h2>Semana 1: Vocabulário Básico</h2>
+      <div class="quiz">
+        <div class="question">
+          <p>1. What is the correct translation of "casa"?</p>
+          <div class="options">
+            <label><input type="radio" name="q1" value="0"> Car </label><br>
+            <label><input type="radio" name="q1" value="1"> House </label><br>
+            <label><input type="radio" name="q1" value="0"> Table </label>
+          </div>
+        </div>
+        <div class="question">
+          <p>2. Choose the correct sentence:</p>
+          <div class="options">
+            <label><input type="radio" name="q2" value="0"> She are happy. </label><br>
+            <label><input type="radio" name="q2" value="1"> She is happy. </label><br>
+            <label><input type="radio" name="q2" value="0"> She am happy. </label>
+          </div>
+        </div>
+        <button onclick="checkAnswers()">Verificar Respostas</button>
+        <div id="result"></div>
+      </div>
     </section>
 
-    <section id="cronograma">
-      <h2>Cronograma Semanal</h2>
-      <p><strong>Semana 1-2:</strong> Verbos básicos, frases do dia a dia, pronomes<br>
-         <strong>Semana 3-4:</strong> Tempos verbais, vocabulário de viagens e trabalho<br>
-         <strong>Semana 5-6:</strong> Vocabulário avançado, estruturas formais e informais<br>
-         <strong>Semana 7-8:</strong> Leitura complexa, redação, simulação de entrevistas</p>
+    <section id="semana2">
+      <h2>Semana 2: Verbos e Tempo Presente</h2>
+      <p>Conteúdo em construção...</p>
     </section>
 
-    <section id="recursos">
-      <h2>Recursos de Estudo</h2>
-      <ul>
-        <li><a href="https://www.duolingo.com" target="_blank">Duolingo</a> (Vocabulário e frases básicas)</li>
-        <li><a href="https://www.bbc.co.uk/learningenglish" target="_blank">BBC Learning English</a></li>
-        <li><a href="https://www.ted.com/talks" target="_blank">TED Talks</a></li>
-        <li><a href="https://writeandimprove.com" target="_blank">Write & Improve</a> (prática de escrita)</li>
-      </ul>
+    <section id="semana3">
+      <h2>Semana 3: Conversa e Situações Comuns</h2>
+      <p>Conteúdo em construção...</p>
     </section>
 
-    <section id="jogo">
-      <h2>Jogos Interativos</h2>
-
-      <h3>Básico: Vocabulário do dia a dia</h3>
-      <div class="game-section">
-        <iframe src="https://wordwall.net/resource/57107976" title="Jogo Básico"></iframe>
-      </div>
-
-      <h3>Intermediário: Verbos e estrutura</h3>
-      <div class="game-section">
-        <iframe src="https://wordwall.net/resource/57111399" title="Jogo Intermediário"></iframe>
-      </div>
-
-      <h3>Avançado: Expressões idiomáticas</h3>
-      <div class="game-section">
-        <iframe src="https://wordwall.net/resource/57111487" title="Jogo Avançado"></iframe>
-      </div>
+    <section id="semana4">
+      <h2>Semana 4: Vocabulário Avançado</h2>
+      <p>Conteúdo em construção...</p>
     </section>
   </main>
 
   <footer>
-    <p>&copy; 2025 - Projeto Inglês Avançado</p>
+    <p>&copy; 2025 - Curso de Inglês em 2 Meses</p>
   </footer>
+
+  <script>
+    function checkAnswers() {
+      let score = 0;
+      const total = 2;
+      const answers = document.querySelectorAll('input[type="radio"]:checked');
+      answers.forEach(ans => score += parseInt(ans.value));
+      document.getElementById("result").textContent = `Você acertou ${score} de ${total} questões.`;
+
+      // Atualiza barra de progresso baseado na pontuação
+      const percentage = Math.round((score / total) * 100);
+      const progressBar = document.getElementById("progressBar");
+      progressBar.style.width = percentage + "%";
+      progressBar.textContent = percentage + "%";
+    }
+  </script>
 </body>
 </html>
